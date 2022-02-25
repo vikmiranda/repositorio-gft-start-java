@@ -1,0 +1,257 @@
+POO foca na modeladem de entidades e nas interações entre estas
+POO foca mais no 'o que fazer'
+estruturada foca no 'como fazer'
+
+Vantagens da POO
+
+melhor coesão
+melhor acoplamento
+diminuicao do Gap semântico (nivel de abstracao maior, o gap semantio diminui, os dois mundos real e programacao ficam mais proximos)
+coletor de lixo. ()
+
+A OO é um paradigma de analise, projeto e programacao
+de sistemas de software baseado na composição e interação entre
+diversas unidades de software chamada de objetos.
+
+Abstração--
+Processo pelo qual se isolam características de um objeto,
+considerando os que tenham em comum certos grupos de objetos.
+
+Reuso--
+Capacidade de criar novas unidades de código a partir
+de outras já existentes
+
+Encapsulamento--
+Capacidade de esconder complexidades e proteger dados.
+
+Entidade = Livro
+Autor
+Ano de publicacao
+Paginas
+Tema
+Edição
+Editora
+ISBN
+
+
+Estruturas básicas da OO--
+Classe
+Atributo
+Método
+Objeto
+Mensagem
+
+
+Classe
+é uma estrutura que abstrai um conjunto de objetos com caracteristicas similares.
+Uma classe define o comportamento de seus objetos através de métodos e os estados
+possiveis destes objetos através de atributos. Em outros termos, uma classe descreve os serviços providos por seusobjetos e quais informações eles podem armazenar.
+
+exemplos de classe: Bola, Carro, Conta, Pessoa, Venda
+
+Dicas: Substantivos
+Nomes significativos
+Contexto deve ser considerado
+
+
+Atributo--
+É o elemento de uma classe responsável por definir sua estrutura de dados.
+O conjunto deste será responsável por representar suas características e fará 
+parte dos objetos criados a partir da classe.
+
+Dicas:
+Substantivos e adjetivos
+Nomes significativos
+Contexto deve ser considerado
+Abstração
+Tipos adequados
+
+
+Método--
+É uma porção de código(sub-rotina) que é disponibilizada pela classe.
+Este é executado quando é feita uma requisição a ele. Um método serve para
+identificar quais servicos, acões, que a classe oferece. Eles são responsaveis
+por definir e realizar um determinado comportamento.
+
+Criação: 
+Visibilidade / Retorno / Nome / Parâmetros
+
+Dicas:
+Verbos
+Nomes significativos
+Contexto deve ser considerado.
+
+métodos especiais:
+Construtor / Destrutor
+
+
+Sobrecarga--
+Mudar a assinatura de acordo com a necessidade
+
+
+Objeto--
+Um objeto é a representação de um conceito/entidade do mundo real, que pode
+ser física(carro,arvore,pessoa) ou conceitual (viagem, compra, estoque) e possui
+um significado bem definido para um determinado software. Para esse conceito/entidade,
+deve ser definida inicialmente  uma classe a partir da qual posteriormente serão instanciados
+objetos distintos.
+
+
+Mensagem--
+É o processo de ativação de um método de um objeto. Isto ocorre quando uma requisição(chamda)
+a esse metodo é realizada, assim disparando a execucao de seu comportamento descrito
+por sua classe. POde também ser direcionada diretamente á classe, caso a requisicao
+seja a um método estático.
+
+
+Herança--
+É o relacionamento entre classes em que uma classe chamada de subclasse(classe filha) 
+é uma extensão, um subtipo, de outra classe chamada superclasse(classe pai, classe mãe).
+Devido a isto, a subclasse consegue reaproveitar os atributos e métodos dela. Além dos que
+venham a ser herdados, a subclasse pode definir seus próprios membros.
+
+
+Herança simples--
+A classe filha tem só uma classe mãe
+Gerente herda Funcionario
+Vendedor herda Funcionario
+
+Herança Múltipla
+A classe filha tem uma ou mais classes mães
+Estágiario herda de Estudante e Funcionario.
+
+Java não têm herança mútipla
+
+
+Polimorfismo--
+A mesma ação, se comportando diferente.
+
+Sobrescrita
+A mesma ação, podendo se comportar diferente. (pode não ser diferente)
+
+
+Polimorfismo x Sobrescrita
+
+
+
+
+Associação--
+Possibilita um relacionamento entre classes/objetos, no qual estes possam pedir ajuda a
+outras classes/objetos e representar de forma completa o conceito ao qual se destinam.
+Neste tipo de relacionamento, as classes e os objetos interagem entre si para atingir seus objetivos.
+
+Tipos de associação-
+*Estrutural*: Composição - Agregação
+e
+*Comportamental*: Dependência
+
+EXEMPLOS--------------------------
+*estrutural*:
+composição(Com parte todo)
+
+tem uma classe Pessoa e uma classe Endereço
+
+uma Pessoa tem um endereço (unico)
+se essa Pessoa deixa de existir, esse Endereço também deixa de existir. Já que pertence
+aquele objeto Pessoa.
+
+
+Agregação: (Sem parte Todo)
+
+tem uma classe Disciplina e uma classe Aluno
+
+por exempo temos uma Disciplina que têm um aluno.
+Se essa Disciplina deixa de existir, o aluno CONTINUA a existir, por que ele
+pode estar relacionado a outra disciplina.
+Aluno é INDEPENDENTE de Disciplina.
+
+
+Agregação x Composição
+O modo como é implementado é igual.
+
+Há uma questão conceitual diferente
+COMPOSIÇÃO há uma relação forte entre as classes/objetos, se um deixa de existir
+o outro deixa de existir tambem
+
+já em AGREGAÇÃO essa relação é um pouco mais fraca, um pode existir sem o outro.
+
+
+-----------------
+*Comportamental* 
+Dependencia: "Depende de"
+
+classe Compra e classe Cupom
+
+um método finalizar() da classe Compra, pode usar um objeto/entidade Cupom
+como parametro, para calcular o valor final da compra.
+
+
+
+
+
+HERANÇA X ASSOCIAÇÃO
+
+a herença é definida na criação da classe.
+na associação pode-se mudar os valores durante a execução
+pois isto vai estar nos atributos ou metodos
+são um pouco mais flexiveis
+
+como decidir qual usar
+pergunte-se
+UMA COISA É A OUTRA? Se sim, use HERANÇA.
+
+Se uma coisa não é a outra, então ela vai USAR a outra, então Associação.
+
+
+--------------------
+Interface--
+Define um contrato que deve ser seguido pela classe que a implementa. Quando uma classe
+implementa uma interface, ela se compromete a realizar todos os comportamentos que a interface
+disponibiliza.
+
+
+
+
+Pacotes--
+São uma organização física ou lógica criada para separar classes com responsabilidades
+distintas. Com isso, espera-se que a aplicação fique mais organizada e seja possível separar
+classes de finalidades e representatividades diferentes.
+
+
+
+
+Visibilidade (ou Modificador de acesso)--
+Um modificador de acesso tem como finalidade determinar até que ponto uma classe,
+atributo ou método pode ser usado. A utilização de modificadores é fundamental para
+o uso efetivo da Orientação a Objetos. Algumas boas práticas e conceitos só são atingidos
+com o uso correto deles.
+
+Tipos:
+Private--
+é a mais restritiva. Só dentro da classe.
+o atributo ou método com private só vai ser visivel dentro da propria classe.
+
+
+Protected--
+Dentro da classe, mesmo pacote, ou subclasse.
+
+
+Public--
+Em qualquer lugar. 
+
+
+
+Próximos passos sugeridos:
+Padrões de Projeto(Design Patterns)
+Boas práticas: SOLID, código, tecnicas de programação, etc.
+Refatoração
+UML
+Frameworks
+Prática e estudo!
+
+
+
+
+
+
+
